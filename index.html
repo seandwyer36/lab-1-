@@ -1,0 +1,281 @@
+
+  <!--
+    Build your page below. Reminders from the assignment brief:
+    - header, nav, main, footer are all required
+    - at least 3 <section> elements, each with a heading and an id
+    - one <article>
+    - one <figure> + <figcaption> pair
+    - one <table> with <thead>, <tbody>, and correct <th scope="...">
+    - one <form> with at least 4 different input types
+    - a single <h1>, and a heading hierarchy that never skips a level
+    - no <script> tags, no inline on*="" event handlers
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sean Dwyer | Computer Science Student</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a class="logo" href="#about">Sean Dwyer</a>
+
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#information">Information</a>
+                    <a href="#resume">Resume</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+              <div class="hero">
+            <p class="eyebrow">Computer Science Student</p>
+            <h1>Sean Dwyer</h1>
+            <p>
+                Computer science student interested in software development,
+                Solution Engineering, and bridging the gap between technology and business.
+            </p>
+
+            <a class="hero-button" href="#projects">View My Projects</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ABOUT SECTION -->
+        <section id="about">
+            <div class="section-heading">
+                <p class="eyebrow">Get to know me</p>
+                <h2>About Me</h2>
+
+            </div>
+
+            <div class="about-content">
+
+                <div class="about-image">
+                    <img
+                        src="seanImage.jpeg"
+                        alt="Portrait of Sean Dwyer, a computer science student"
+                    >
+                </div>
+
+                <div class="about-text">
+                    <p>
+                        My name is Sean Dwyer, and I am a computer science
+                        student interested in technology and software
+                        development. My favorite areas are networking,
+                        and cybersecurity.
+
+                    <p>
+                        I enjoy learning how software works, solving problems,
+                        and developing projects that allow me to apply what I
+                        learn in class to real-world situations.
+                    </p>
+
+                    <p>
+                        My goal is to continue developing my technical skills
+                        while building a strong foundation for a career in
+                        the technology industry.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
+            <div class="section-heading">
+                <p class="eyebrow">What I've worked on</p>
+                <h2>Selected Projects</h2>
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="featured-project">
+                    <p class="project-number">01</p>
+
+                    <h3>Secure Audit Log</h3>
+
+                    <p>
+                        A Secure audit log built in rust!
+                    </p>
+
+                    <a href="https://github.com/CS-305-SNHU/lab4-secure-audit-log-seandwyer36-1.git">
+                        View Project
+                    </a>
+                </article>
+
+
+                <article class="Internship-project">
+                    <p class="project-number">02</p>
+
+                    <h3>Internship Project</h3>
+
+                    <p>
+                        A presentation of my Internship Capstone where I built
+                        automated pipelines using AWS.
+                    </p>
+
+                    <a href="https://snhu-my.sharepoint.com/:p:/g/personal/sean_dwyer2_snhu_edu/IQCM67EVqEgKR4i1cNTtwc9VAYItnRCJkOejeg4Jf76I6_w?CID=d44b116f-1b8c-bd02-e513-c0acbba05c07&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjA5MjUwMDQuMDQiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9">
+                        View Project
+                    </a>
+                </article>
+
+
+                <article class="project-card">
+                    <p class="project-number">03</p>
+
+                    <h3>Future Project</h3>
+
+                    <p>
+                        A future project where I plan to expand my programming
+                        knowledge and explore additional areas of computer
+                        science.
+                    </p>
+
+                    <a href="https://example.com">
+                        View Project
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- INFORMATION SECTION -->
+        <section id="information">
+            <div class="section-heading">
+                <p class="eyebrow">My background</p>
+                <h2>Information</h2>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Experience</th>
+                            <th scope="col">Organization</th>
+                            <th scope="col">Time Period</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row">Internship</th>
+                            <td>Fidelity Investments: data engineer</td>
+                            <td>Summer 2026</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Computer Science Student</th>
+                            <td>University</td>
+                            <td>2023 - Present</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Programming Coursework</th>
+                            <td>Computer Science Program</td>
+                            <td>2023 - Present</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Personal Projects</th>
+                            <td>Independent</td>
+                            <td>2023 - Present</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+
+
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+            <div class="section-heading">
+                <p class="eyebrow">Let's connect</p>
+                <h2>Contact Me</h2>
+            </div>
+
+            <form action="#">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                    ></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input
+                        type="checkbox"
+                        id="reply"
+                        name="reply"
+                    >
+
+                    <label for="reply">
+                        I would like Sean to reply to my message.
+                    </label>
+                </div>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+        </section>
+
+    </main>
+    <section id="resume">
+    <h2>Resume</h2>
+
+    <p>
+        View my resume to learn more about my education,
+        technical skills, projects, and experience.
+    </p>
+
+    <a href="images/Sean_Dwyer_Resume_GE_Vernova.pdf">View My Resume</a>
+</section>
+
+
+
+    <footer>
+        <p>&copy; 2026 Sean Dwyer. All rights reserved.</p>
+
+        <a href="#">
+            Click here for problems with this page
+        </a>
+    </footer>
+
+
+  
+</body>
+</html>

@@ -1,0 +1,427 @@
+/* =========================================================
+   CUSTOM PROPERTIES
+   Define your color palette and spacing scale here.
+   Required: at least a background color, a text color, and
+   one accent/primary color — reused via var() elsewhere.
+   ========================================================= */
+:root {
+    --primary-color: #2964c3;
+    --primary-dark: #1d4ed8;
+    --dark-color: #111827;
+    --text-color: #374151;
+    --light-color: #f8fafc;
+    --white: #ffffff;
+    --border-color: #e5e7eb;
+
+    --max-width: 1100px;
+}
+
+  /* --color-bg: ...; */
+  /* --color-text: ...; */
+  /* --color-primary: ...; */
+  /* --space-sm: ...; */
+  /* --space-md: ...; */
+  /* --space-lg: ...; */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: var(--light-color);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+/* =========================================================
+   BASE STYLES
+   (box-sizing reset, body font, link colors, etc. — your choice)
+   ========================================================= */
+header {
+    background-color: var(--dark-color);
+    color: var(--white);
+}
+
+
+/* =========================================================
+   LAYOUT
+   Remember: the assignment requires BOTH CSS Grid and Flexbox
+   used somewhere appropriate. Comment each one, and be ready to
+   justify the choice in your README.
+   ========================================================= */
+
+
+/* =========================================================
+   COMPONENTS
+   (nav, table, form, figure, etc.)
+   ========================================================= */
+.nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;}
+
+
+   .logo {
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: var(--white);
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #93c5fd;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 7rem 2rem;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    line-height: 1.05;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 1.15rem;
+}
+
+.eyebrow {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.hero .eyebrow {
+    color: #93c5fd;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.25rem;
+
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 6px;
+
+    transition: background-color 0.2s ease;
+}
+
+hero-button:hover {
+    background-color: var(--primary-dark);
+}
+
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.section-heading {
+    margin-bottom: 2rem;
+}
+
+.section-heading h2 {
+    margin-top: 0;
+    color: var(--dark-color);
+    font-size: 2.25rem;
+}
+
+
+/* =========================
+   ABOUT
+   ========================= */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.about-text {
+    font-size: 1.05rem;
+}
+
+/* =========================
+   PROJECTS
+   ========================= */
+
+/* CSS Grid is used for the projects because it makes it easy
+   to organize multiple project cards into responsive columns. */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.project-card,
+.featured-project {
+    padding: 2rem;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover,
+.featured-project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* The featured article intentionally uses a different
+   font from the rest of the page as required by the assignment. */
+
+.featured-project {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.project-number {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+
+/* =========================
+   TABLE
+   ========================= */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+}
+
+th,
+td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+}
+
+thead {
+    background-color: var(--dark-color);
+    color: var(--white);
+}
+
+
+/* =========================
+   FORM
+   ========================= */
+
+form {
+    max-width: 700px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+
+    font: inherit;
+
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--white);
+}
+
+
+/* :focus provides a visible indicator for keyboard users. */
+
+input:focus,
+textarea:focus {
+    outline: 3px solid #bfdbfe;
+    border-color: var(--primary-color);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.checkbox-group label {
+    margin: 0;
+    font-weight: normal;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+
+    color: var(--white);
+    background-color: var(--primary-color);
+
+    border: none;
+    border-radius: 6px;
+
+    font: inherit;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    padding: 2rem;
+    text-align: center;
+
+    color: var(--white);
+    background-color: var(--dark-color);
+}
+
+footer a {
+    color: #93c5fd;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablet layout */
+@media (max-width: 768px) {
+
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        max-width: 350px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section {
+        padding: 4rem 1.5rem;
+    }
+}
+
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero {
+        padding: 5rem 1.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+
+    .section-heading h2 {
+        font-size: 1.8rem;
+    }
+}
+
+   
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+   Test at ~375px, ~768px, and ~1440px.
+   ========================================================= */
+@media (min-width: 768px) {
+
+}
+
+
+
